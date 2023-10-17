@@ -1,1 +1,50 @@
-<p>Hallo</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hensoEmpire Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        #hensoEmpire {
+            font-size: 2em;
+            text-align: center;
+        }
+
+        #additionalText {
+            display: none;
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="hensoEmpire">hensoEmpire</div>
+    <div id="additionalText">This is additional text that appears when you scroll down.</div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const hensoEmpire = document.getElementById('hensoEmpire');
+            const additionalText = document.getElementById('additionalText');
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > 100) { // Adjust this value to control when the additional text appears.
+                additionalText.style.display = 'block';
+            } else {
+                additionalText.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
