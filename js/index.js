@@ -1,0 +1,74 @@
+window.addEventListener('scroll', () => {
+    const hensoEmpire = document.getElementById('hensoEmpire');
+    const additionalText = document.getElementById('additionalText');
+    const boogieBomb = document.getElementById("boogieBomb");
+    const headertab1 = document.getElementById("headertab1");
+    const headertext = document.getElementById("headertext");
+    const first_block = document.getElementById("first_block");
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 20) {
+        additionalText.classList.remove("fade-out");
+        additionalText.classList.add("fade-in");
+    } else {
+        additionalText.style.display = 'none';
+        hensoEmpire.style.display = "block";
+        
+        
+    }
+    if(scrollPosition > 100) {
+        boogieBomb.style.display = 'block';
+        boogieBomb.classList.remove("fade-outsize");
+        boogieBomb.classList.add("fade-insize");
+    } else {
+        boogieBomb.classList.remove("fade-insize");
+        boogieBomb.classList.add("fade-outsize");
+    }
+    if(scrollPosition>=350) {
+        hensoEmpire.classList.remove("fade-in");
+        hensoEmpire.classList.add("fade-out");
+        headertext.style.display = "block";
+        headertext.classList.remove("fade-out");
+        headertext.classList.add("fade-in");
+    } else {
+        headertext.classList.remove("fade-in");
+        headertext.classList.add("fade-out");
+        hensoEmpire.classList.remove("fade-out");
+        hensoEmpire.classList.add("fade-in");
+    }
+    if(scrollPosition>=400) {
+        additionalText.classList.remove("fade-in");
+        additionalText.classList.add("fade-out");
+        headertab1.style.display = "block";
+        headertab1.classList.remove("fade-out");
+        headertab1.classList.add("fade-in");
+    } else {
+        headertab1.classList.remove('fade-in');
+        headertab1.classList.add('fade-out');
+        additionalText.style.display = "block";
+    }
+    if(scrollPosition>=480) {
+        document.getElementById("test").style.display = "block";
+        document.getElementById("test").classList.remove("fade-out");
+        document.getElementById("test").classList.add("fade-in");
+    } else {
+        document.getElementById("test").classList.remove("fade-in");
+        document.getElementById("test").classList.add("fade-out");
+    }
+    if(scrollPosition>=485) {
+        document.getElementById("breaker").style.display = "block";
+        document.getElementById("breaker").classList.remove("fade-out");
+        document.getElementById("breaker").classList.add("fade-in");
+    } else {
+        document.getElementById("breaker").classList.remove("fade-in");
+        document.getElementById("breaker").classList.add("fade-out");
+    }
+    if(scrollPosition>=490) {
+        document.getElementById("textfield").style.display = "block";
+        document.getElementById("textfield").classList.remove("fade-out");
+        document.getElementById("textfield").classList.add("fade-in");
+    } else {
+        document.getElementById("textfield").classList.remove("fade-in");
+        document.getElementById("textfield").classList.add("fade-out");
+    }
+});
