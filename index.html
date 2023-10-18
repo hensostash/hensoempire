@@ -8,41 +8,93 @@
         body {
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background: linear-gradient(90deg, #800080, #0000FF);
+            color: black;
+            background-size: cover;
+        }
+        .pixelated-bg {
+            background: url("dot.png");
+            background-repeat: repeat;
+            background-size: 2px 2px;
+            width: 100%;
+            height: 500%;
+            position: absolute;
+            /* Use absolute positioning to cover the whole viewport */
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
         
         #hensoEmpire {
-            font-size: 2em;
-            text-align: center;
+            position: absolute;
+            font-size: 4em;
+            top: 25%;
+            left: 20%;
+            color:white;
         }
 
         #additionalText {
-            display: none;
+            position: absolute;
+            display: block;
             font-size: 1.5em;
-            text-align: center;
-            margin-top: 20px;
+            top: 34%;
+            left: 40%;
+            animation: fade 2s 1 forwards;
+            color: white;
+        }
+        #test {
+            position: absolute;
+            top: 100%;
+        }
+
+        #boogieBomb {
+            position: absolute;
+            display: none;
+            animation: fade 2s 1 forwards;
+            top: 50%;
+            left: 50%;
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="pixelated-bg">
+    </div>
     <div id="hensoEmpire">hensoEmpire</div>
-    <div id="additionalText">This is additional text that appears when you scroll down.</div>
-
+    <div id="additionalText">Fortnite WebDevelopment.</div>
+    <div id="boogieBomb">
+        <img src="fortnite-boogie-bomb.gif" width="64px">
+    </div>
+    <div id="test">
+        <img src="WhatsApp Image 2023-10-04 at 1.16.20 PM.jpeg" height="64px">
+    </div>
     <script>
         window.addEventListener('scroll', () => {
             const hensoEmpire = document.getElementById('hensoEmpire');
             const additionalText = document.getElementById('additionalText');
+            const boogieBomb = document.getElementById("boogieBomb");
             const scrollPosition = window.scrollY;
 
-            if (scrollPosition > 100) { // Adjust this value to control when the additional text appears.
+            if (scrollPosition > 20) { // Adjust this value to control when the additional text appears.
                 additionalText.style.display = 'block';
             } else {
                 additionalText.style.display = 'none';
+                hensoEmpire.style.display = "block";
+            }
+            if(scrollPosition > 100) {
+                boogieBomb.style.display = 'block';
+            } else {
+                boogieBomb.style.display = "none";
             }
         });
     </script>
