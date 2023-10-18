@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #800080, #0000FF);
+    color: black;
+    background-size: cover;
+}
+.pixelated-bg {
+    background: url("../media/dot.png");
+    background-repeat: repeat;
+    background-size: 2px 2px;
+    width: 100%;
+    height: 500%;
+    position: absolute;
+    /* Use absolute positioning to cover the whole viewport */
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#hensoEmpire {
+    position: absolute;
+    font-size: 4em;
+    top: 35%;
+    left: 20%;
+    color:white;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    background-color: #29292971;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center the content */
+    padding: 0 1%; /* Add some padding to the header */
+    backdrop-filter: blur(5px);
+}
+
+#imageheader {
+    height: 50%;
+    width: 200px;
+    height: 200px;
+    display: block;
+    z-index: 998;
+}
+
+#headertext {
+    display: none;
+    position: absolute;
+    top: -13%;
+    left: 13%;
+    color: white;
+    font-size: 2rem;
+}
+
+#headertab1 {
+    display: none;
+    height: 50%;
+    margin-right: 5%;
+    z-index: 970;
+}
+
+#first_block {
+    position: absolute;
+    top: 80%;
+    background-color: gainsboro;
+    height: 50%;
+    width: 100%;
+}
+
+
+#test {
+    display: none;
+    position: absolute;
+    left: 23%;
+    top: 8%;
+}
+#breaker {
+    display: none;
+    position: absolute;
+    width: 4px;
+    height: 170px;
+    background-color: black;
+    top: 36%;
+    left: 50%;
+}
+#textfield {
+    display: none;
+    position: absolute;
+    left: 54%;
+    top: 35%;
+    width: 30%;
+}
+#additionalText {
+    position: absolute;
+    display: block;
+    font-size: 1.5em;
+    top: 44%;
+    left: 40%;
+    opacity: 0;
+    color: white;
+}
+
+
+#boogieBomb {
+    position: absolute;
+    display: none;
+    top: 60%;
+    left: 34%;
+    z-index: 980;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5); /* Larger inset shadow */
+
+}
+
+.fade-in {
+    animation: fadeIn 2s ease both;
+  }
+  
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5); /* Initial scale factor, adjust as needed */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Final scale factor, adjust as needed */
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s ease both;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .fade-insize {
+    animation: fadeInSizer 1s ease both;
+  }
+
+  .fade-outsize {
+    animation: fadeOutSizer 1s ease both;
+  }
+
+  @keyframes fadeOutSizer {
+    from {
+        opacity: 1;
+        width: 28%;
+    }
+    to {
+        opacity: 0;
+        width: 0px;
+    }
+  }
+
+  @keyframes fadeInSizer {
+    from {
+        opacity: 0;
+        width: 0px;
+    }
+    to {
+        opacity: 1;
+        width: 28%;
+    }
+  }
