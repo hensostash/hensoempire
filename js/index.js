@@ -24,13 +24,23 @@ window.addEventListener('scroll', () => {
         boogieBomb.classList.remove("fade-insize");
         boogieBomb.classList.add("fade-outsize");
     }
+    if(scrollPosition>=200) {
+        document.getElementById("header").style.display = "flex";
+        document.getElementById("header").classList.remove("fade-outsize");
+        document.getElementById("header").classList.add("fade-insize");
+    } else {
+        document.getElementById("header").classList.remove("fade-insize");
+        document.getElementById("header").classList.add("fade-outsize");
+    }
     if(scrollPosition>=350) {
         hensoEmpire.classList.remove("fade-in");
         hensoEmpire.classList.add("fade-out");
         headertext.style.display = "block";
         headertext.classList.remove("fade-out");
         headertext.classList.add("fade-in");
+        
     } else {
+        
         headertext.classList.remove("fade-in");
         headertext.classList.add("fade-out");
         hensoEmpire.classList.remove("fade-out");
@@ -72,5 +82,20 @@ window.addEventListener('scroll', () => {
     } else {
        // document.getElementById("textfield").classList.remove("fade-in");
        // document.getElementById("textfieldc").classList.add("fade-out");
+    }
+    if(scrollPosition>=1100) {
+        document.getElementById("second_block").style.display = "block";
+        document.getElementById("second_block").classList.remove("fade-out");
+        document.getElementById("second_block").classList.add("fade-in");
+        document.getElementById("imageSecondBlock").style.display ="block";
+        document.getElementById("imageSecondBlock").classList.remove("fade-out");
+        document.getElementById("imageSecondBlock").classList.add("fade-in");
+    } else {
+        
+    }
+    if(scrollPosition>=1200) {
+        document.getElementById("imageSecondBlock").classList.remove("fade-in");
+        document.getElementById("imageSecondBlock").classList.add("addScaleHower");
+
     }
 });
