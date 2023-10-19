@@ -24,8 +24,9 @@ body {
     position: absolute;
     font-size: 4em;
     top: 35%;
-    left: 20%;
+    left: 37%;
     color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #header {
@@ -34,7 +35,7 @@ body {
     height: 8%;
     background-color: #29292971;
     z-index: 999;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center; /* Vertically center the content */
     padding: 0 1%; /* Add some padding to the header */
@@ -67,18 +68,80 @@ body {
 
 #first_block {
     position: absolute;
-    top: 80%;
+    top: 85%;
+    left: 15%;
     background-color: gainsboro;
-    height: 50%;
-    width: 100%;
+    height: 40%;
+    width: 70%;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5); /* Larger inset shadow */
+    display: none;
 }
 
+#second_block {
+    position: absolute;
+    top: 164%;
+    left: 15%;
+    height: 40%;
+    width: 40%;
+    filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5));
+    display: none;
+    color: white;
+}
+
+#imageSecondBlock {
+    display: none;
+    position: absolute;
+    height: 500px;
+    top: 145%;
+    left: 60%;
+    
+}
+#imageSecondBlock:hover {
+    animation: upperHover 0.5s 1 forwards;
+    filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.31));
+}
+
+.addScaleHower {
+    animation: lowerHower 0.5s 1 forwards;
+}
+
+
+@keyframes upperHover {
+    from {
+        transform: scale(1); /* Initial scale factor, adjust as needed */
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5));
+    }
+    to {
+        transform: scale(1.1); /* Final scale factor, adjust as needed */
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 1));
+    }
+}
+
+@keyframes lowerHower {
+    from {
+        transform: scale(1.1); /* Final scale factor, adjust as needed */
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5));
+    }
+    to {
+        transform: scale(1); /* Initial scale factor, adjust as needed */
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.206));
+    }
+}
+
+@keyframes iPhoneAnim {
+    from {
+        top: 200%;
+    }
+    to {
+        top: 145%;
+    }
+}
 
 #test {
     display: none;
     position: absolute;
-    left: 23%;
-    top: 8%;
+    left: 7%;
+    top: -4%;
 }
 #breaker {
     display: none;
@@ -86,15 +149,15 @@ body {
     width: 4px;
     height: 170px;
     background-color: black;
-    top: 36%;
-    left: 50%;
+    top: 30%;
+    left: 47%;
 }
 #textfield {
     display: none;
     position: absolute;
     left: 54%;
-    top: 35%;
-    width: 30%;
+    top: 24%;
+    width: 35%;
 }
 #additionalText {
     position: absolute;
@@ -113,8 +176,8 @@ body {
     top: 60%;
     left: 34%;
     z-index: 980;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5); /* Larger inset shadow */
-
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 .fade-in {
@@ -157,21 +220,17 @@ body {
   @keyframes fadeOutSizer {
     from {
         opacity: 1;
-        width: 28%;
     }
     to {
         opacity: 0;
-        width: 0px;
     }
   }
 
   @keyframes fadeInSizer {
     from {
         opacity: 0;
-        width: 0px;
     }
     to {
         opacity: 1;
-        width: 28%;
     }
   }
