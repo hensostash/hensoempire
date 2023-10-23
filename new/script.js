@@ -3,17 +3,7 @@ import gsap from "https://cdn.skypack.dev/gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CONFIG = {
-  explode: false };
 
-
-const CTRL = new GUI();
-
-const TOGGLE = () => {
-  document.body.toggleAttribute("data-exploded");
-};
-
-CTRL.add(CONFIG, "explode").name("Explode?").onChange(TOGGLE);
 
 // GSAP Stuff
 
@@ -28,7 +18,7 @@ POPPERS.forEach(pop => {
       start: "bottom bottom+=50",
       end: "top top+=50" },
 
-    filter: index => index === 0 ? "brightness(1)" : "brightness(2)",
+    filter: index => index === 0 ? "opacity(0)" : "opacity(1)",
     yPercent: -30 });
 
 });

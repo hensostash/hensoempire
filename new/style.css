@@ -9,7 +9,7 @@ body {
 	margin: 0;
 	font-family:  "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
 	overflow-x: hidden;
-	background: hsl(0 0% 2%);
+	background: hsl(0, 0%, 0%);
 }
 
 body::before {
@@ -47,7 +47,7 @@ h1 span, h2 {
 }
 
 h1 span:first-of-type {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	text-transform: uppercase;
 }
 h1 span:last-of-type {
@@ -161,13 +161,10 @@ section {
 	transition: outline 0.2s;
 	border-radius: 1rem;
 }
-[data-exploded] .pop-out-image {
-	outline-color: hsl(0 0% 100% / 0.75);
-}
 
-[data-exploded] .pop-out-image figure:last-of-type {
-	transform: translate3d(0, 0, 100px);
+#image_second {
+	
 }
-[data-exploded] .pop-out-image figure:first-of-type {
-	transform: translate3d(0, 0, -100px);
+.image1 {
+	width: 200px;
 }
