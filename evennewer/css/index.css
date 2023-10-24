@@ -54,7 +54,15 @@ h1 span, h2 {
 
 #image2 {
 	margin-top: 5rem;
-	display: block;
+	display: none;
+	width: 15rem;
+	opacity: 1;
+}
+
+#image3 {
+	border-radius: 50%;
+	margin-top: 30rem;
+	display: none;
 	width: 15rem;
 	opacity: 1;
 }
@@ -66,6 +74,12 @@ h1 span, h2 {
 }
 
 #image2:hover {
+    animation: upperHover 0.5s 1 forwards;
+    filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.31));
+	opacity: 1;
+}
+
+#image3:hover {
     animation: upperHover 0.5s 1 forwards;
     filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.31));
 	opacity: 1;
@@ -128,14 +142,14 @@ section:first-of-type {
 }
 
 .fade-in {
-    animation: fadeIn 2s ease both;
+    animation: fadeIn 1s ease both;
   }
   
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: scale(0.5); /* Initial scale factor, adjust as needed */
+        transform: scale(0.1); /* Initial scale factor, adjust as needed */
     }
     to {
         opacity: 1;
@@ -164,13 +178,30 @@ section:first-of-type {
   @keyframes fadeOut {
     from {
       opacity: 1;
+	  transform: scale(1);
     }
     to {
       opacity: 0;
+	  transform: scale(0.1);
     }
   }
 
   #breakerfirst {
+	display: none;
+	margin-top: 2.5rem;
+	background-color: white;
+	width: 18rem;
+	height: 0.1rem;
+  }
+  #breakerfirst2 {
+	display: none;
+	margin-top: 2.5rem;
+	background-color: white;
+	width: 18rem;
+	height: 0.1rem;
+  }
+  #breakerfirst3 {
+	display: block;
 	margin-top: 2.5rem;
 	background-color: white;
 	width: 18rem;
@@ -178,6 +209,7 @@ section:first-of-type {
   }
 
   #textfirst2 {
+	display: none;
 	font-weight: 400;
 	margin-bottom: 15rem;
 	text-align: center;
@@ -191,7 +223,6 @@ section:first-of-type {
   #secondBlockText1 {
 	font-weight: 400;
 	font-size: 3rem;
-	margin-bottom: 15rem;
 	text-align: center;
 	margin-top: 2.5rem;
 	color: transparent;
@@ -205,6 +236,28 @@ section:first-of-type {
 	margin-bottom: 15rem;
 	text-align: center;
 	margin-top: 2.5rem;
+	color: transparent;
+	-webkit-background-clip: text;
+	        background-clip: text;
+	width: 40%;
+  }
+
+  #secondBlockText3 {
+	font-weight: 400;
+	font-size: 4rem;
+	text-align: center;
+	margin-top: 2.5rem;
+	color: transparent;
+	-webkit-background-clip: text;
+	        background-clip: text;
+	width: 40%;
+  }
+  #secondBlockText4 {
+	margin-top: 1000rem;
+	font-weight: 400;
+	font-size: 4rem;
+	margin-bottom: 15rem;
+	text-align: center;
 	color: transparent;
 	-webkit-background-clip: text;
 	        background-clip: text;
@@ -257,6 +310,23 @@ section:first-of-type {
     z-index: 970;
 }
 
+#headertab2 {
+	top: 15%;
+    display: none;
+	position: absolute;
+    left: 85%;
+    z-index: 970;
+}
+
+#headertab3 {
+	top: 15%;
+    display: none;
+	position: absolute;
+    left:80%;
+    z-index: 970;
+	border-radius: 50%;
+}
+
 @media screen and (max-width:720px) {
 	#headertab1 {
 		top: 35%;
@@ -290,3 +360,20 @@ section:first-of-type {
 		width: 10rem;
 	}
  }
+/* Styles for the scroll-to-top button */
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333; /* Dark background color */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+.scroll-to-top-button i {
+    font-size: 24px;
+}
