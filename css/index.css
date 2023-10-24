@@ -121,10 +121,12 @@ body {
     from {
         transform: scale(1.1); /* Final scale factor, adjust as needed */
         filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5));
+        opacity: 1;
     }
     to {
         transform: scale(1); /* Initial scale factor, adjust as needed */
         filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.206));
+        opacity: 1;
     }
 }
 

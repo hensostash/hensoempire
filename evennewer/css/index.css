@@ -46,6 +46,68 @@ h1 span, h2 {
 	        background-clip: text;
 }
 
+#image1 {
+	display: none;
+	width: 25rem;
+	opacity: 1;
+}
+
+#image2 {
+	margin-top: 5rem;
+	display: block;
+	width: 15rem;
+	opacity: 1;
+}
+
+#image1:hover {
+    animation: upperHover 0.5s 1 forwards;
+    filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.31));
+	opacity: 1;
+}
+
+#image2:hover {
+    animation: upperHover 0.5s 1 forwards;
+    filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.31));
+	opacity: 1;
+}
+
+
+.addScaleHower {
+    animation: lowerHower 0.5s 1 forwards;
+}
+
+@keyframes lowerHower {
+    from {
+        transform: scale(1.1); /* Final scale factor, adjust as needed */
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5));
+    }
+    to {
+        transform: scale(1); /* Initial scale factor, adjust as needed */
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.206));
+    }
+}
+
+@keyframes upperHover {
+    from {
+        transform: scale(1); /* Initial scale factor, adjust as needed */
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5));
+    }
+    to {
+        transform: scale(1.1); /* Final scale factor, adjust as needed */
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 1));
+    }
+}
+
+#firstText {
+	opacity: 0;
+	animation: fadeIn 2s 1 forwards;
+}
+
+#secondText {
+	opacity: 0;
+	animation: fadeIn 2s forwards 1s 1;
+}
+
 h1 span:first-of-type {
 	font-size: 1.5rem;
 	text-transform: uppercase;
@@ -62,6 +124,7 @@ section {
 }
 section:first-of-type {
 	margin-top: 25vh;
+	margin-bottom: 20vh;
 }
 
 .fade-in {
@@ -80,6 +143,20 @@ section:first-of-type {
     }
 }
 
+
+.headerAnimIn {
+	animation: headerIn 3s ease both;
+}
+
+@keyframes headerIn {
+	from {
+		height: 1px;
+	}
+	to {
+		height: 8%;
+	}
+}
+
 .fade-out {
     animation: fadeOut 1s ease both;
   }
@@ -92,3 +169,90 @@ section:first-of-type {
       opacity: 0;
     }
   }
+
+  #breakerfirst {
+	margin-top: 2.5rem;
+	background-color: white;
+	width: 18rem;
+	height: 0.1rem;
+  }
+
+  #textfirst2 {
+	font-weight: 400;
+	margin-bottom: 15rem;
+	text-align: center;
+	margin-top: 2.5rem;
+	color: transparent;
+	-webkit-background-clip: text;
+	        background-clip: text;
+	width: 40%;
+  }
+
+  #secondBlockText1 {
+	font-weight: 400;
+	font-size: 3rem;
+	margin-bottom: 15rem;
+	text-align: center;
+	margin-top: 2.5rem;
+	color: transparent;
+	-webkit-background-clip: text;
+	        background-clip: text;
+	width: 40%;
+  }
+  #secondBlockText2 {
+	font-weight: 400;
+	font-size: 4rem;
+	margin-bottom: 15rem;
+	text-align: center;
+	margin-top: 2.5rem;
+	color: transparent;
+	-webkit-background-clip: text;
+	        background-clip: text;
+	width: 40%;
+  }
+
+
+#header {
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    background-color: #29292971;
+    z-index: 999;
+    display: none;
+	top: 0px;
+    left: 0px;
+    justify-content: space-between;
+    align-items: center; /* Vertically center the content */
+    padding: 0 1%; /* Add some padding to the header */
+    backdrop-filter: blur(5px);
+}
+
+#imageheader {
+    height: 50%;
+    width: 200px;
+    height: 200px;
+    display: block;
+    z-index: 998;
+}
+
+#headertext {
+    display: none;
+    position: absolute;
+    top: -13%;
+    left: 41%;
+	text-transform: uppercase;
+	font-weight: 800;
+	background: linear-gradient(hsl(0 0% 98%) 30%, hsl(0 0% 30%));
+	color: transparent;
+	-webkit-background-clip: text;
+	        background-clip: text;
+    font-size: 2rem;
+}
+
+#headertab1 {
+	top: 35%;
+    display: none;
+	position: absolute;
+    left: 90%;
+    z-index: 970;
+}
