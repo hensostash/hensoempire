@@ -256,3 +256,37 @@ section:first-of-type {
     left: 90%;
     z-index: 970;
 }
+
+@media screen and (max-width:720px) {
+	#headertab1 {
+		top: 35%;
+		display: none;
+		position: absolute;
+		left: 30%;
+		z-index: 970;
+	}
+}
+
+@media screen and (max-width:450px) {
+	#headertab1 {
+		top: 35%;
+		display: none;
+		position: absolute;
+		left: 50%;
+		z-index: 970;
+	}
+	#headertext {
+		left: 10%;
+		top: 20%;
+		font-size: 1rem;
+	}
+	#pop-out-image2 {
+		margin-top: 20rem;
+	}
+	#image1 {
+		width: 20rem;
+	}
+	#image2 {
+		width: 10rem;
+	}
+ }
