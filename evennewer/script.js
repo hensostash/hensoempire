@@ -74,6 +74,9 @@ window.addEventListener('scroll', () => {
     headertext.classList.remove("fade-in");
     header.style.display = "none";
     header.classList.remove("fade-in");
+    headertab1.style.display = "none";
+    headertab2.style.display = "none";
+    headertab3.style.display = "none";
   }
   if(scrollPosition >= 500) {
     headertext.style.display = "block";
@@ -81,16 +84,30 @@ window.addEventListener('scroll', () => {
   }
   if(scrollPosition>=900) {
     headertab1.style.display = "block";
+    headertab1.classList.remove("fade-out");
     headertab1.classList.add("fade-in");
+  } else {
+    headertab1.classList.remove("fade-in");
+    headertab1.classList.add("fade-out");
   }
   if(scrollPosition>=1600) {
     headertab2.style.display = "block";
+    headertab2.classList.remove("fade-out");
     headertab2.classList.add("fade-in");
+  } else {
+    headertab2.classList.remove("fade-in");
+    headertab2.classList.add("fade-out");
   }
   if(scrollPosition>=2400) {
     headertab3.style.display = "block";
+    headertab3.classList.remove("fade-out");
     headertab3.classList.add("fade-in");
   }
+    else {
+      headertab3.classList.remove("fade-in");
+      headertab3.classList.add("fade-out");
+    }
+  
 });
 
 const textElement = document.getElementById('textfirst');
@@ -193,3 +210,71 @@ window.addEventListener('scroll', () => {
   textElement5.style.webkitBackgroundClip = 'text';
   textElement5.style.backgroundClip = 'text';
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const imgElement1 = document.getElementById('headertab1');
+  const imgElement2 = document.getElementById('headertab2');
+  const imgElement3 = document.getElementById('headertab3');
+  const targetElement1 = document.getElementById('pop-out-image');
+  const targetElement2 = document.getElementById('pop-out-image2');
+  const targetElement3 = document.getElementById('pop-out-image3');
+
+  imgElement1.addEventListener('click', function() {
+    // Calculate the offset of the target element 1
+    const offset = targetElement1.getBoundingClientRect().top + window.scrollY -200;
+
+    // Smoothly scroll to the target element 1
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth'
+    });
+  });
+
+  imgElement2.addEventListener('click', function() {
+    // Calculate the offset of the target element 2
+    const offset = targetElement2.getBoundingClientRect().top + window.scrollY -200;
+
+    // Smoothly scroll to the target element 2
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth'
+    });
+  });
+
+  imgElement3.addEventListener('click', function() {
+    // Calculate the offset of the target element 3
+    const offset = targetElement3.getBoundingClientRect().top + window.scrollY -200;
+
+    // Smoothly scroll to the target element 3
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth'
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollToTopButton = document.getElementById('scrollToTop');
+  
+  // Show/hide the button based on scroll position
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 450) {
+          scrollToTopButton.style.display = 'block';
+          scrollToTopButton.classList.remove("fade-out");
+          scrollToTopButton.classList.add("fade-in");
+      } else {
+        scrollToTopButton.classList.remove("fade-in");
+        scrollToTopButton.classList.add("fade-out");
+      }
+  });
+  
+  // Scroll to the top when the button is clicked
+  scrollToTopButton.addEventListener('click', function() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  });
+});
+
