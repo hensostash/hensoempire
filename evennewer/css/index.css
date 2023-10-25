@@ -195,14 +195,12 @@ section:first-of-type {
   }
   #breakerfirst2 {
 	display: none;
-	margin-top: 2.5rem;
 	background-color: white;
 	width: 18rem;
 	height: 0.1rem;
   }
   #breakerfirst3 {
 	display: block;
-	margin-top: 2.5rem;
 	background-color: white;
 	width: 18rem;
 	height: 0.1rem;
