@@ -111,23 +111,33 @@ window.addEventListener('scroll', () => {
 });
 
 const textElement = document.getElementById('textfirst');
-const scrollOffset = 10; // Adjust the offset as needed
+const scrollOffset = 200; // Set the scroll offset to 200
 
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY - scrollOffset; // Apply the offset
-  const gradientValue = (scrollPosition / (document.body.scrollHeight - window.innerHeight)) * 100;
 
-  // Ensure the gradientValue stays within the 0-100 range
-  const normalizedGradientValue = Math.max(0, Math.min(100, gradientValue));
+  if (scrollPosition < 0) {
+    // Text color is fully black when scroll position is less than 0
+    
+  } else if (scrollPosition > 100 && scrollPosition <= 650) {
+    const textOpacity = scrollPosition / 650;
+    const normalizedGradientValue = Math.max(0, Math.min(100, textOpacity * 100));
 
-  // Calculate the background color based on the gradient value
-  const backgroundColor = `linear-gradient(hsl(0 0% 98%) ${normalizedGradientValue}%, hsl(0 0% 30%))`;
+    // Calculate the background color based on the gradient value
+    const backgroundColor = `linear-gradient(hsl(0, 0%, 89%) ${normalizedGradientValue}%, hsl(0, 0%, 0%))`;
 
-  // Update the background and background-clip properties, while keeping text color transparent
-  textElement.style.background = backgroundColor;
-  textElement.style.webkitBackgroundClip = 'text';
-  textElement.style.backgroundClip = 'text';
+    // Update the background and background-clip properties
+    textElement.style.background = backgroundColor;
+    textElement.style.webkitBackgroundClip = 'text';
+    textElement.style.backgroundClip = 'text';
+  } else {
+    // Text color is fully white when scroll position is greater than 650
+    
+  }
 });
+
+
+
 
 const imageElement = document.getElementById('pop-out-image');
 const imageScrollOffset = 250; // Adjust the offset as needed
